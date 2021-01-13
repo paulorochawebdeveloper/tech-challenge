@@ -22,6 +22,9 @@ class CreateMoviesTable extends Migration
             $table->date('released_at');
             $table->integer('cost');
 
+        // Foreign keys
+        $table->foreignId('genre_id')
+        ->constrained();
             $table->timestamps();
         });
     }

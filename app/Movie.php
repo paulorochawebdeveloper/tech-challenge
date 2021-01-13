@@ -16,8 +16,16 @@ class Movie extends Model
         'runtime',
         'released_at',
         'cost',
+        'genre_id',
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function actors()
+    {
+        return $this->belongsToMany(Actor::class);
+    }
     /**
      * Scope a query to only include breed of a given filter.
      *

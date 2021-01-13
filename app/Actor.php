@@ -15,6 +15,21 @@ class Actor extends Model
         'born_at',
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function movies()
+    {
+        return $this->belongsToMany(Movie::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class);
+    }
     
     /**
      * Scope a query to only include breed of a given filter.
