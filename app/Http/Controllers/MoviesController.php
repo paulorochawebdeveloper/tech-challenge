@@ -9,9 +9,8 @@ use Illuminate\Http\Request;
 
 class MoviesController extends Controller
 {
-
     /**
-     * Index breed.
+     * Index movie.
      *
      * @param  Request  $request
      * @return Response
@@ -25,7 +24,7 @@ class MoviesController extends Controller
 
     }
     /**
-     * Show the specified breed.
+     * Show the specified movie.
      *
      * @param  Request  $request
      * @param  string  $id
@@ -52,7 +51,7 @@ class MoviesController extends Controller
         return parent::formatResponse($movie, "Successfully", 201);
     }
     /**
-     * Update the specified breed.
+     * Update the specified movie.
      *
      * @param  MovieUpdateRequest  $request
      * @param  string  $id

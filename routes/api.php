@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActorsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,17 @@ Route::prefix('movie')->group(function () {
     ->name('movies.update');
     Route::delete('/movies/{id}', 'MoviesController@destroy')
     ->name('movies.delete');
+});
+
+Route::prefix('actor')->group(function () {
+    Route::post('actors', 'ActorsController@store')
+    ->name('actors.store');
+    Route::get('actors', 'ActorsController@index')
+    ->name('actors.index');
+    Route::get('actors/{id}', 'ActorsController@show')
+    ->name('actors.show');
+    Route::put('/actors/{id}', 'ActorsController@update')
+    ->name('actors.update');
+    Route::delete('/actors/{id}', 'ActorsController@destroy')
+    ->name('actors.delete');
 });
