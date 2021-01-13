@@ -9,15 +9,15 @@ use Illuminate\Support\Facades\Schema;
 
 trait HasFetchAllRenderCapabilities
 {
-    private Builder $builder;
+    private $builder;
 
-    private array $conditions = [];
+    private $conditions = [];
 
-    private string $orderField;
+    private $orderField;
 
-    private string $orderDirection;
+    private $orderDirection;
 
-    private array $allowedConditions = [
+    private $allowedConditions = [
         'like' => 'LIKE',
         'equal' => '=',
         'not_equal' => '!=',
