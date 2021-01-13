@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "16dada06-77c5-4012-9ccc-5a65ad26c19f",
+		"name": "Tech Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "Movie index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie/movies?name=Norbit&page=2&order=asc.name&per_page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"movies"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Norbit"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "order",
+									"value": "asc.name"
+								},
+								{
+									"key": "per_page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie/movies/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"movies",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Norbit\",\n    \"year\": 2007,\n    \"synopsis\": \"Em 1968, um carro arremessa um bebê de nome Norbit Albert Rice em direção ao The Golden Wonton, um misto de orfanato e restaurante chinês, administrado pelo rabugento sr. Wong. O jovem Norbit cresce lá, e vive uma paixão de infância com sua melhor amiga Kate Thomas; até esta ser adotada, deixando-o sozinho novamente. Cinco anos depois, Norbit está brincado no playground do colégio, quando é atacado por gêmeos valentões e salvo por uma garota gorda chamada Rasputia Latimore, que torna-se sua protetora e faz de Norbit seu namorado. Após o fim do ensino médio, os dois se casam e iniciam uma vida juntos.\",\n    \"runtime\": \"60\",\n    \"released_at\": \"2007-02-01\",\n    \"cost\": \"20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie/movies/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Norbit\",\n    \"year\": 2007,\n    \"synopsis\": \"Em 1968, um carro arremessa um bebê de nome Norbit Albert Rice em direção ao The Golden Wonton, um misto de orfanato e restaurante chinês, administrado pelo rabugento sr. Wong. O jovem Norbit cresce lá, e vive uma paixão de infância com sua melhor amiga Kate Thomas; até esta ser adotada, deixando-o sozinho novamente. Cinco anos depois, Norbit está brincado no playground do colégio, quando é atacado por gêmeos valentões e salvo por uma garota gorda chamada Rasputia Latimore, que torna-se sua protetora e faz de Norbit seu namorado. Após o fim do ensino médio, os dois se casam e iniciam uma vida juntos.\",\n    \"runtime\": \"60\",\n    \"released_at\": \"2007-02-01\",\n    \"cost\": \"20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Norbit 2\",\n    \"year\": 2007,\n    \"synopsis\": \"Em 1968, um carro arremessa um bebê de nome Norbit Albert Rice em direção ao The Golden Wonton, um misto de orfanato e restaurante chinês, administrado pelo rabugento sr. Wong. O jovem Norbit cresce lá, e vive uma paixão de infância com sua melhor amiga Kate Thomas; até esta ser adotada, deixando-o sozinho novamente. Cinco anos depois, Norbit está brincado no playground do colégio, quando é atacado por gêmeos valentões e salvo por uma garota gorda chamada Rasputia Latimore, que torna-se sua protetora e faz de Norbit seu namorado. Após o fim do ensino médio, os dois se casam e iniciam uma vida juntos.\",\n    \"runtime\": \"60\",\n    \"released_at\": \"2007-02-01\",\n    \"cost\": \"20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
