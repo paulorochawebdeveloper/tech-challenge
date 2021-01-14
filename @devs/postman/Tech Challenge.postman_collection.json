@@ -60,7 +60,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/movie/movies/2",
+							"raw": "http://127.0.0.1:8000/api/movie/movies/1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -73,7 +73,7 @@
 								"api",
 								"movie",
 								"movies",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -92,7 +92,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Norbit\",\n    \"year\": 2007,\n    \"synopsis\": \"Em 1968, um carro arremessa um bebê de nome Norbit Albert Rice em direção ao The Golden Wonton, um misto de orfanato e restaurante chinês, administrado pelo rabugento sr. Wong. O jovem Norbit cresce lá, e vive uma paixão de infância com sua melhor amiga Kate Thomas; até esta ser adotada, deixando-o sozinho novamente. Cinco anos depois, Norbit está brincado no playground do colégio, quando é atacado por gêmeos valentões e salvo por uma garota gorda chamada Rasputia Latimore, que torna-se sua protetora e faz de Norbit seu namorado. Após o fim do ensino médio, os dois se casam e iniciam uma vida juntos.\",\n    \"runtime\": \"60\",\n    \"released_at\": \"2007-02-01\",\n    \"cost\": \"20\",\n    \"genre_id\": \"86dc3b33-a36b-3272-b9ea-18741cbf2c2f\"\n}",
+							"raw": "{\n    \"name\": \"Norbit\",\n    \"year\": 2007,\n    \"synopsis\": \"Em 1968, um carro arremessa um bebê de nome Norbit Albert Rice em direção ao The Golden Wonton, um misto de orfanato e restaurante chinês, administrado pelo rabugento sr. Wong. O jovem Norbit cresce lá, e vive uma paixão de infância com sua melhor amiga Kate Thomas; até esta ser adotada, deixando-o sozinho novamente. Cinco anos depois, Norbit está brincado no playground do colégio, quando é atacado por gêmeos valentões e salvo por uma garota gorda chamada Rasputia Latimore, que torna-se sua protetora e faz de Norbit seu namorado. Após o fim do ensino médio, os dois se casam e iniciam uma vida juntos.\",\n    \"runtime\": \"60\",\n    \"released_at\": \"2007-02-01\",\n    \"cost\": \"20\",\n    \"genre_id\": \"160e514a-b90b-31ac-a353-8381e4c35676\",\n    \"actors\": [\n        {\n        \"actor_id\": 1,\n        \"appearances\": 1\n        },\n        {\n        \"actor_id\": 2,\n        \"appearances\": 3\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -172,7 +172,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Norbit 2\",\n    \"year\": 2007,\n    \"synopsis\": \"Em 1968, um carro arremessa um bebê de nome Norbit Albert Rice em direção ao The Golden Wonton, um misto de orfanato e restaurante chinês, administrado pelo rabugento sr. Wong. O jovem Norbit cresce lá, e vive uma paixão de infância com sua melhor amiga Kate Thomas; até esta ser adotada, deixando-o sozinho novamente. Cinco anos depois, Norbit está brincado no playground do colégio, quando é atacado por gêmeos valentões e salvo por uma garota gorda chamada Rasputia Latimore, que torna-se sua protetora e faz de Norbit seu namorado. Após o fim do ensino médio, os dois se casam e iniciam uma vida juntos.\",\n    \"runtime\": \"60\",\n    \"released_at\": \"2007-02-01\",\n    \"cost\": \"20\"\n}",
+							"raw": "{\n    \"name\": \"Norbit 2\",\n    \"year\": 2007,\n    \"synopsis\": \"Em 1968, um carro arremessa um bebê de nome Norbit Albert Rice em direção ao The Golden Wonton, um misto de orfanato e restaurante chinês, administrado pelo rabugento sr. Wong. O jovem Norbit cresce lá, e vive uma paixão de infância com sua melhor amiga Kate Thomas; até esta ser adotada, deixando-o sozinho novamente. Cinco anos depois, Norbit está brincado no playground do colégio, quando é atacado por gêmeos valentões e salvo por uma garota gorda chamada Rasputia Latimore, que torna-se sua protetora e faz de Norbit seu namorado. Após o fim do ensino médio, os dois se casam e iniciam uma vida juntos.\",\n    \"runtime\": \"60\",\n    \"released_at\": \"2007-02-01\",\n    \"cost\": \"20\",\n    \"genre_id\": \"160e514a-b90b-31ac-a353-8381e4c35676\",\n    \"actors\": [\n        {\n        \"actor_id\": 1,\n        \"appearances\": 1\n        },\n        {\n        \"actor_id\": 2,\n        \"appearances\": 3\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -367,7 +367,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"Norbit 2\",\n    \"year\": 2007,\n    \"synopsis\": \"Em 1968, um carro arremessa um bebê de nome Norbit Albert Rice em direção ao The Golden Wonton, um misto de orfanato e restaurante chinês, administrado pelo rabugento sr. Wong. O jovem Norbit cresce lá, e vive uma paixão de infância com sua melhor amiga Kate Thomas; até esta ser adotada, deixando-o sozinho novamente. Cinco anos depois, Norbit está brincado no playground do colégio, quando é atacado por gêmeos valentões e salvo por uma garota gorda chamada Rasputia Latimore, que torna-se sua protetora e faz de Norbit seu namorado. Após o fim do ensino médio, os dois se casam e iniciam uma vida juntos.\",\n    \"runtime\": \"60\",\n    \"released_at\": \"2007-02-01\",\n    \"cost\": \"20\"\n}",
+									"raw": "{\n    \"name\": \"Norbit 2\",\n    \"bio\": \"Em 1968, um carro arremessa um bebê de nome Norbit Albert Rice em direção ao The Golden Wonton, um misto de orfanato e restaurante chinês, administrado pelo rabugento sr. Wong. O jovem Norbit cresce lá, e vive uma paixão de infância com sua melhor amiga Kate Thomas; até esta ser adotada, deixando-o sozinho novamente. Cinco anos depois, Norbit está brincado no playground do colégio, quando é atacado por gêmeos valentões e salvo por uma garota gorda chamada Rasputia Latimore, que torna-se sua protetora e faz de Norbit seu namorado. Após o fim do ensino médio, os dois se casam e iniciam uma vida juntos.\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

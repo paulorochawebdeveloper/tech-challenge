@@ -33,7 +33,7 @@ class ActorsController extends Controller
     public function show(Request $request, $id)
     {
         $actor = Actor::findOrFail($id);
-
+        
         return parent::formatResponse($actor, "Successfully", 200);
     }
 

@@ -31,7 +31,7 @@ class MoviesController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $movie = Movie::findOrFail($id);
+        $movie = Movie::with(['actors', 'genre'])->findOrFail($id);
 
         return parent::formatResponse($movie, "Successfully", 200);
     }
@@ -46,6 +46,11 @@ class MoviesController extends Controller
     {
         $movie = new Movie($request->validated());
         $movie->save();
+
+        //attach actors
+        if($request->has('actors')){
+            $movie->actors()->attach($request->input('actors'));
+        }
         
         return parent::formatResponse($movie, "Successfully", 201);
     }
@@ -61,6 +66,11 @@ class MoviesController extends Controller
         $movie = Movie::findOrFail($id);
         $movie->update($request->validated());
 
+        //attach actors
+        if($request->has('actors')){
+            $movie->actors()->attach($request->input('actors'));
+        }
+                
         return parent::formatResponse($movie, "Successfully", 200);
 
     }

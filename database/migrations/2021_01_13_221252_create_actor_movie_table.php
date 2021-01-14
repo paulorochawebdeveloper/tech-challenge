@@ -14,10 +14,17 @@ class CreateActorMovieTable extends Migration
     public function up()
     {
         Schema::create('actor_movie', function (Blueprint $table) {
+            $table->integer('appearances')->default(1);
+
             // Foreign keys
             $table->foreignId('actor_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade') 
                 ->constrained();
             $table->foreignId('movie_id')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
                 ->constrained();
         });
     }
