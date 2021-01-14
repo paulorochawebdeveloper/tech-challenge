@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Actor;
 use App\Http\Requests\ActorStoreRequest;
 use App\Http\Requests\ActorUpdateRequest;
+use App\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ActorsController extends Controller
 {
@@ -33,7 +35,24 @@ class ActorsController extends Controller
     public function show(Request $request, $id)
     {
         $actor = Actor::findOrFail($id);
-        
+
+        //GET favorite Genre of Actor
+        $countByGenre = Movie::where('actor_movie.actor_id', $id)
+        ->select(DB::raw("genres.name as genre"))
+        ->AddSelect(DB::raw('count(movies.genre_id) as movies_in_genre'))
+        ->join('actor_movie', 'movies.id', '=', 'actor_movie.movie_id')
+        ->join(
+            'genres',
+            'genres.id',
+            '=',
+            'movies.genre_id'
+        )
+        ->groupBy('movies.genre_id')
+        ->orderBy('movies_in_genre', 'desc')
+        ->get();
+
+        $actor['participation_by_gender'] = $countByGenre;
+
         return parent::formatResponse($actor, "Successfully", 200);
     }
 
