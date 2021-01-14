@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Genre;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
@@ -28,6 +30,14 @@ class Movie extends Model
     }
     
     /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class);
+    }
+
+    /**
      * Scope a query to only include breed of a given filter.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
@@ -38,6 +48,13 @@ class Movie extends Model
     {
         if($filters->input('name')){
             $query->where('movies.name', 'LIKE', '%' . $filters->input('name') . '%');
+        }
+
+        if($filters->route('actor_id')){
+            $id = $filters->route('actor_id');
+            $query->whereHas('actors', function (Builder $queryBuilder ) use ($id) {
+                $queryBuilder->where('id', $id);
+            });
         }
 
         return $query;

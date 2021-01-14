@@ -47,4 +47,8 @@ Route::prefix('actor')->group(function () {
     ->name('actors.update');
     Route::delete('/actors/{id}', 'ActorsController@destroy')
     ->name('actors.delete');
+
+    //actor movies
+    Route::get('actors/{actor_id}/movies', 'MoviesController@index')
+    ->name('actors.movies');
 });

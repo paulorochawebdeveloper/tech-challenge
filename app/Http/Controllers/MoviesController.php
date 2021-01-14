@@ -17,12 +17,11 @@ class MoviesController extends Controller
      */
     public function index(Request $request)
     {
-
-        $movies = parent::sort(Movie::filters($request), $request->input('sort'))->get();
+        $movies = parent::sort(Movie::with(['actors', 'genre'])->filters($request), $request->input('sort'))->get();
 
         return parent::formatResponse($movies, "Successfully",200,  true, $request->input('page'), $request->input('per_page'));
-
     }
+
     /**
      * Show the specified movie.
      *
