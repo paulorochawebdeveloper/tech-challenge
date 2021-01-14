@@ -30,6 +30,7 @@ class MovieStoreRequest extends FormRequest
             'runtime' => ['required', 'numeric'],
             'released_at' => ['required', 'date'],
             'cost' => ['required', 'numeric'],
+            'genre_id' => ['required', 'exists:genres,id'],
         ];
     }
 }

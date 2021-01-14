@@ -26,6 +26,7 @@ class Movie extends Model
     {
         return $this->belongsToMany(Actor::class);
     }
+    
     /**
      * Scope a query to only include breed of a given filter.
      *

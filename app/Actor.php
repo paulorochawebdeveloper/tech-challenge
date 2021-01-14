@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Genre;
 use Illuminate\Database\Eloquent\Model;
 
 class Actor extends Model
